@@ -1,0 +1,44 @@
+
+Algorithm
+小A 和 小B 在玩猜数字。小B 每次从 1, 2, 3 中随机选择一个，小A 每次也从 1, 2, 3 中选择一个猜。他们一共进行三次这个游戏，请返回 小A 猜对了几次？
+解法1:
+class Solution {
+    public int game(int[] guess, int[] answer) {
+        int rightNum = 0;
+        for (int i = 0; i < answer.length; i++) {
+            if (guess[i] == answer[i]){
+                rightNum ++;
+            }
+        }
+        return rightNum;
+    }
+}
+
+Review
+一万小时学习理论被人们所熟知，但是一万小时的刻意练习是指通过这么长时间的练习可以让你达到行业顶尖水平，但往往很多技能并不需要我们达到顶尖，只要掌握就行，而达到掌握的水平，理论证明只需要20个小时，但这20个小时不是随便的20小时，需要有一定的要求1.分解需要掌握的技能2.学习到可以进行自我修正，能纠正自己的错误位置3.扫除一切会打扰你的东西，保持专注4.至少练习20个小时。
+https://m.youtube.com/watch?v=5MgBikgcWnY&feature=share&from=timeline&isappinstalled=0
+
+Tip
+Spring Retry使用技巧
+Spring Retry是一个用户定时重试的工具，可以配置多种重试策略，包括固定间隔时间重试，指数退避重试，随机指数退避。下面对Spring Retry的配置进行说明，主要完成的需求如下：4s/16s/64s进行重试，一共重试三次，三次重试失败后记录日志。
+
+@Service
+public class PayService {
+    private Logger logger = LoggerFactory.getLogger(getClass());
+
+    private final int totalNum = 100000;
+
+    @Retryable(value = Exception.class, maxAttempts = 3, backoff = @Backoff(delay = 4000L, multiplier = 4))
+    public int minGoodsnum(int num) throws Exception {
+        // to do
+    }
+
+    @Recover
+    public void recover(Exception e) {
+        logger.error("重试三次失败");
+    }
+}
+
+Share
+HTTP/2相较于目前广泛使用的HTTP/1.1版本，优越之处不仅在于对TCP链接的复用，而且其server push 功能更能提前发送给浏览器它需要的内容，极大提升了浏览器加载网页的速度。相信这个版本普及后，基于h5做的应用更加能够贴近原生app给用户带来的体验。
+https://medium.com/@factoryhr/http-2-the-difference-between-http-1-1-benefits-and-how-to-use-it-38094fa0e95b?from=timeline&isappinstalled=0
