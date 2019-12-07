@@ -21,7 +21,6 @@ https://m.youtube.com/watch?v=5MgBikgcWnY&feature=share&from=timeline&isappinsta
 Tip
 Spring Retry使用技巧
 Spring Retry是一个用户定时重试的工具，可以配置多种重试策略，包括固定间隔时间重试，指数退避重试，随机指数退避。下面对Spring Retry的配置进行说明，主要完成的需求如下：4s/16s/64s进行重试，一共重试三次，三次重试失败后记录日志。
-
 @Service
 public class PayService {
     private Logger logger = LoggerFactory.getLogger(getClass());
