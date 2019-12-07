@@ -1,0 +1,30 @@
+Algorithm
+1184.环形公交路线上有 n 个站，按次序从 0 到 n - 1 进行编号。我们已知每一对相邻公交站之间的距离，distance[i] 表示编号为 i 的车站和编号为 (i + 1) % n 184.的车站之间的距离。
+环线上的公交车都可以按顺时针和逆时针的方向行驶。
+返回乘客从出发点 start 到目的地 destination 之间的最短距离。
+解法1:
+class Solution {
+    public int distanceBetweenBusStops(int[] distance, int start, int destination) {
+           int clockWise = 0;
+           int sumDistance = 0;
+           for (int i = 0; i < distance.length; i++) {
+               sumDistance += distance[i];
+           }
+           int temp;
+           if (start > destination) {
+               temp = start;
+               start = destination;
+               destination = temp;
+           }
+           for (int i = start; i < destination; i ++) {
+               clockWise += distance[i];
+           }
+           if (clockWise < sumDistance - clockWise) {
+               return clockWise;
+           } else {
+               return sumDistance - clockWise;
+           }
+            
+    }
+}
+总结：第一次提交没有考虑到这是一个环形路线，导致提交错误，后面判断start与destination的大小来排除这种情况
