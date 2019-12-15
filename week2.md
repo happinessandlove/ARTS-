@@ -99,5 +99,5 @@ Spring中所有的依赖注入方式：<br>
 #### 2. set方法注入
 #### 3. 字段注入（利用反射）
 #### 4. 方法查找注入<br>
-Spring 默认都是单例，方法查找注入方式则允许在使用依赖时获取一个新的对象。
+Spring 默认都是单例，方法查找注入方式则允许在使用依赖时获取一个新的对象。<br>
 [原文链接](https://medium.com/@ilyailin7777/all-dependency-injection-types-spring-336da7baf51b)
