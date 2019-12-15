@@ -32,10 +32,12 @@ class Solution {
 
 # 2. Review
 这周阅读的文章是四个是代码整洁的技巧，主要是作者看完clean code一书后选取的四个技巧在实践后进行的分享
-1. 写的代码必须要进行单元测试
-2. 给变量、类以及方法起有意义的名字，尽量使简短而又精确的
-3. 类和方法尽量小，每个方法不超过4行，要符合单一职责原则
+1. 写的代码必须要进行单元测试。
+2. 给变量、类以及方法起有意义的名字，尽量使简短而又精确的。
+3. 类和方法尽量小，每个方法不超过4行，要符合单一职责原则。
 4. 方法不能够有副作用，主要表现在方法名不能够表示这个方法做了什么，其次方法内部是包含多个复杂操作，这是紧耦合的，会导致这个方法不能够被单独测试或者说该方法复用性比较低。
+<br>
+[GitHub](http://github.com)
 <br>
 [原文链接](https://engineering.videoblocks.com/these-four-clean-code-tips-will-dramatically-improve-your-engineering-teams-productivity-b5bd121dd150)
 
