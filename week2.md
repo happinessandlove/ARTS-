@@ -40,7 +40,7 @@ class Solution {
 
 # 3. Tips
 这次分享effective java中的第一个技巧：使用静态工厂方法而不是使用类的构造方法来获取类实例
-### * 5个优势:
+### 5个优势:
 #### 1. 静态工厂方法有自己的名字，使其对调用者更加友善。<br>
 **example:**<br>
 ``` java
@@ -95,5 +95,9 @@ public static MyInterface getInstance() throws ClassNotFoundException, IllegalAc
 6. get{}/new{} //{}可以是任意你要得到的类型<br>
 # 4. Share:
 Spring中所有的依赖注入方式：<br>
-#### 1. <br>
+#### 1. 构造方法注入  <br>
+#### 2. set方法注入
+#### 3. 字段注入（利用反射）
+#### 4. 方法查找注入<br>
+Spring 默认都是单例，方法查找注入方式则允许在使用依赖时获取一个新的对象。
 [原文链接](https://medium.com/@ilyailin7777/all-dependency-injection-types-spring-336da7baf51b)
