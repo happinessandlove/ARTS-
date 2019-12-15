@@ -88,4 +88,7 @@ valueOf
 getInstance
 newInstance
 get{}/new{} //{}可以是任意你要得到的类型
-
+Share:
+Spring中所有的依赖注入方式
+1.
+https://medium.com/@ilyailin7777/all-dependency-injection-types-spring-336da7baf51b
