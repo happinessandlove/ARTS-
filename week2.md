@@ -83,10 +83,10 @@ public static MyInterface getInstance() throws ClassNotFoundException, IllegalAc
 }
 ```
 `MyInterfaceImpl1`是`MyInterface`的具体实现类，在我写这个`getInstance`静态工厂方法时这个实现类可以不存在。<br>
-2个劣势<br>
+## 2个劣势<br>
 #### 1. 使用静态工厂方法的类一般没有`public`或者`protected`的构造方法，这意味着该类不能够被继承，但俗话说，塞翁失马焉知非福，在这种约束下，这要求调用者必须使用组合而非继承来使用该类。<br>
 #### 2. 静态工厂方法不太容易被找到，因为类肯定可以通过构造方法来获取实例，但有没有静态工厂方法却是不明确的。java官方文档也没有将静态工厂方法放在显眼的位置，但是构造方法确实放在开头很显眼的位置。<br>
-*静态工厂方法的建议命名：*<br>
+## 静态工厂方法的建议命名:
 from<br>
 of<br>
 valueOf<br>
