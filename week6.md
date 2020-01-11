@@ -96,7 +96,7 @@ public class SpellChecker {
 1. 构造方法的参数最好能够使用工厂类
 2. 在java8中可以使用Supplier<T>这个接口通过lambada表达式提供需要的注入对象
 # 3. Tips
-这次分享的技巧是python的20个实用技巧
+这次分享的技巧是python的30个实用技巧
 >[文章链接](https://medium.com/better-programming/java-stream-collectors-explained-6209a67a4c29)
 
 # 4. Share
