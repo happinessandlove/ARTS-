@@ -1,26 +1,46 @@
 # 1. Algorithm
-7. 整数反转<br>
+>[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)<br>
 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。<br>
 ``` java
-public static int reverse(int x) {
-        System.out.println(Math.pow(2, 31) - 1);
-        System.out.println(- Math.pow(2, 31));
-        Stack<Integer> stack = new Stack<>();
-        int t = x;
-        while (t != 0) {
-            stack.push(t % 10);
-            t = t / 10;
+public boolean isValid(String s) {
+      if(s.isEmpty()){
+            return true;
         }
-        int size = stack.size();
-        int result = 0;
-        for (int i = 0; i < size; i ++) {
-            result += stack.pop()*Math.pow(10,i);
+        String[] strings = s.split("");
+        if (strings.length%2 != 0){
+            return false;
         }
-        if (result >= Math.pow(2, 31) - 1 || result <= - Math.pow(2, 31)){
-            return 0;
+        List<String> in = new ArrayList();
+        in.add("[");
+        in.add("{");
+        in.add("(");
+        List<String> out = new ArrayList();
+        out.add("]");
+        out.add("}");
+        out.add(")");
+        Stack<String> stack=new Stack();
+        Stack<String> temp = new Stack<>();
+        for (int i = 0; i < strings.length; i++){
+            if (in.contains(strings[i])) {
+                stack.push(strings[i]);
+            }
+            if (out.contains(strings[i])) {
+                if(stack.isEmpty()){
+                    return false;
+                }
+                String pop = stack.pop();
+                temp.clear();
+                if (!in.get(out.indexOf(strings[i])).equals(pop)){
+                    return false;
+                }
+            }
         }
-        return result;
-}
+        if(stack.isEmpty()){
+            return true;
+        }else {
+            return false;
+        }
+    }
 ```
 # 2. Review
 在我们平时的代码中，会发现一个类会依赖其它的类，如一个拼写检查的类会依赖于一个词典类，下面给出几个错误示范：
