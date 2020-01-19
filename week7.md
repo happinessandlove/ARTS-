@@ -90,5 +90,5 @@ public class RomanNumerals {
 >[文章链接](http://linux.vbird.org/linux_basic/0410accountmanager.php#account)
 
 # 4. Share
-数据分析渐渐成为各行各业的从业者的必备能力，数据分析主要包括以下几个典型步骤：商业理解->数据理解->数据准备与清洗->建模->模型评估->部署上线。这些东西对于没有编程基础或者是不是数据分析领域的开发人员来说都是比较困难的。IBM云提供了图形化的界面让你快速完成以上步骤，同时也提供Notebooks给专业人士进行在线编码。下面是入门指导，一共5篇文章。
->[入门指导](https://developer.ibm.com/articles/introduction-watson-studio/)
+人工智能快速发展，对于AI合成的人脸的使用逐渐走入人们的视野之中，这其中包括在交友软件中会看到各式各样的美女，AI出现以前，你可能看到是经过修饰的美女，但在如今的AI时代，你看到的人可能根本不存在。如何正确的利用好这些技术，如何去权衡伦理，这可能也是需要我们做技术的人去思考。
+>[原文链接](https://mp.weixin.qq.com/s/uqntigPDxGv-wsUM9-QqHQ)
